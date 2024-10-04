@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="language-selector">
+            <button onclick="setLanguage('en')">EN</button>
+            <button onclick="setLanguage('tr')">TR</button>
+            <button onclick="setLanguage('ru')">RU</button>
+            <button onclick="setLanguage('tm')">TM</button>
+            <span onclick="toggleDarkMode()" style="cursor: pointer;float: right;">🌞</span>
+        </div>
+
+        <h1 id="name"></h1>
+
+        <h4 id="job_description"></h4>
+
+        <h3 id="summary_title"></h3>
+
+                <p id="summary_content"></p>
+        
+        <h3 id="education_title"></h3>
+
+                <ul class="matrix">
+                    <li class="row">
+                        <ul>
+                            <li class="liE1" id="education_content_1_1"></li>
+                            <li class="liE2" id="education_content_1_2"></li>
+                        </ul>
+                    </li>
+                    <li class="row">
+                        <ul>
+                            <li class="liE1 italic" id="education_content_1_3"></li>
+                            <li class="liE2"></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="matrix">
+                    <li class="row">
+                        <ul>
+                            <li class="liE1" id="education_content_2_1"></li>
+                            <li class="liE2" id="education_content_2_2"></li>
+                        </ul>
+                    </li>
+                    <li class="row">
+                        <ul>
+                            <li class="liE1 italic" id="education_content_2_3"></li>
+                            <li class="liE2"></li>
+                        </ul>
+                    </li>
+                </ul>
+
+        <h3 id="work_title"></h3>
+            
+                <ul class="matrix">
+                    <li class="row">
+                        <ul>
+                            <li class="li1" id="work_content_1_1"></li>
+                            <li class="li2" id="work_content_1_2"></li>
+                        </ul>
+                    </li>
+                    <li class="row">
+                        <ul>
+                            <li class="li1 italic" id="work_content_1_3"></li>
+                            <li class="li2"></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="matrix">
+                    <li class="row">
+                        <ul>
+                            <li class="li1" id="work_content_2_1"></li>
+                            <li class="li2" id="work_content_2_2"></li>
+                        </ul>
+                    </li>
+                    <li class="row">
+                        <ul>
+                            <li class="li1 italic" id="work_content_2_3"></li>
+
+                            <li class="li2"></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="matrix">
+                    <li class="row">
+                        <ul>
+                            <li class="li1" id="work_content_3_1"></li>
+                            <li class="li2" id="work_content_3_2"></li>
+                        </ul>
+                    </li>
+                    <li class="row">
+                        <ul>
+                            <li class="li1 italic" id="work_content_3_3"></li>
+                            <li class="li2"></li>
+                        </ul>
+                    </li>
+                </ul>
+
+        <h3 id="abilities_title"></h3>
+
+                <ul>
+                    <li id="abilities_content_1"></li>
+                    <ul>
+                        <li id="abilities_content_1_1">1</li>
+                        <li id="abilities_content_1_2">2</li>
+                    </ul>
+                    <li id="abilities_content_2"></li>
+                    <li id="abilities_content_3"></li>
+                    <ul>
+                        <li id="abilities_content_3_1"></li>
+                        <li id="abilities_content_3_2"></li>
+                        <li id="abilities_content_3_3"></li>
+                        <li id="abilities_content_3_4"></li>
+                    </ul>
+                    <li id="abilities_content_4"></li>
+                </ul>
+
+        <h3 id="contact_title"></h3>
+
+                <p id="contect_content_1"></p>
+    </div>
+
+    <script>
+        const content = {
+            en: {
+                name: "Nuryagdy NURBERDIYEV",
+                jobDescription:"Computer Education and Instructional Technologies ",
+                summaryTitle: "Summary",
+                educationTitle:"Education",
+                summaryContent: "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I have been living in Turkey since 2015. I have completed and continue my professional, personal development and educational experiences here. Thanks to the Foreigners' Identity Document stating that I am of Turkish origin, my insurance premiums are calculated like normal citizens, which facilitates my administrative procedures.",
+                educationContent11:"Kocaeli University",
+                educationContent12:"October 2022",
+                educationContent13:"Computer Education and Instructional Technologies",
+                educationContent21:"Kocaeli University",
+                educationContent22:"July 2025",
+                educationContent23:"Computer Programming",
+                workTitle: "Work Experience",
+                workContent11: "FKO Informatics Import Export Limited Company.",
+                workContent12: "May 2023 - August 2024",
+                workContent13: "Warehouse Clerk",
+                workContent21: "Atatürk secondary school.",
+                workContent22: "January 2021 - May 2021",
+                workContent23: "Student Teacher",
+                workContent31: "28 Haziran secondary school.",
+                workContent32: "October 2020 - January 2021",
+                workContent33: "Student Teacher",
+                educationTitle: "Education",
+                abilitiesTitle: "Skills and Interests",
+                abilitiesContent1: "Continuing Education Certificates:",
+                abilitiesContent11:"Istanbul University - Robotic Coding Instructor Training",
+                abilitiesContent12:"BTK Academy - Introduction to Basic Electronics and Robotics",
+                abilitiesContent2:"Capabilities: Scratch, Arduino, Flutter.",
+                abilitiesContent3:"Languages:",
+                abilitiesContent31:"Turkmen (Native)",
+                abilitiesContent32:"Russian(Near-native)",
+                abilitiesContent33:"Turkish (Near-native)",
+                abilitiesContent34:"English (Intermediate)",
+                abilitiesContent4:"Interests: .net, c#, Fuller, Dart.",
+                contactTitle: "Communication",
+                contectContent1:"email: nuryagdy.n@hotmail.com"
+                
+            },
+            tr: {
+                name: "Nuryagdy NURBERDIYEV",
+                jobDescription:"Bilgisayar ve Öğretim Teknolojileri Öğretmeni",
+                summaryTitle: "Özet",
+                educationTitle:"Eğitim",
+                summaryContent: "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015 yılından bu yana Türkiye'de yaşıyorum. Mesleki, kişisel gelişim ve eğitim deneyimlerimi burada tamamladım ve sürdürüyorum. Türk asıllı olduğumu belirten Yabancı Kimlik Belgesi sayesinde sigorta primlerim normal vatandaşlar gibi hesaplanıyor ve bu da idari işlemlerimi kolaylaştırıyor.",
+                educationContent11:"Kocaeli Üniversitesi",
+                educationContent12:"Ekim 2022",
+                educationContent13:"Bilgisayar ve Öğretim Teknolojileri Öğretmenliği",
+                educationContent21:"Kocaeli Üniversitesi",
+                educationContent22:"Temmuz 2025",
+                educationContent23:"Bilgisayar Programcılığı",
+                workTitle: "İş Deneyimi",
+                workContent11: "FKO Bilişim İthalat İhracat Limited Şirketi.",
+                workContent12: "Mayıs 2023 - Ağustos 2024",
+                workContent13: "Depo Görevlisi",
+                workContent21: "Atatürk ortaokulu.",
+                workContent22: "Ocak 2021 - Mayıs 2021",
+                workContent23: "Stajyer Öğretmen",
+                workContent31: "28 Haziran ortaokulu.",
+                workContent32: "Ekim 2020 - Ocak 2021",
+                workContent33: "Stajyer Öğretmen",
+                educationTitle: "Eğitim",
+                abilitiesTitle: "Yetenekler ve İlgi Alanları",
+                abilitiesContent1: "Sürekli Eğitim Sertifikaları",
+                abilitiesContent11:"İstanbul Üniversitesi - Robotik Kodlama Eğitmenlik Eğitimi",
+                abilitiesContent12:"BTK Academy - Introduction to Basic Electronics and Robotics",
+                abilitiesContent2:"Yetenekler: Scratch, Arduino, Flutter.",
+                abilitiesContent3:"Diller:",
+                abilitiesContent31:"Türkmence (Ana dil)",
+                abilitiesContent32:"Rusça (Ana dile yakın)",
+                abilitiesContent33:"Türkçe (Ana dile yakın)",
+                abilitiesContent34:"İngilizce (Orta düzey)",
+                abilitiesContent4:"İlgi Alanları: .NET, C#, Fuller, Dart",
+                contactTitle: "İletişim",
+                contectContent1:"Eposta: nuryagdy.n@hotmail.com"
+            },
+            ru: {
+                name: "Нурягды НУРБЕРДЫЕВ",
+                jobDescription:"Учитель компьютерных и учебных технологий",
+                summaryTitle: "Резюме",
+                educationTitle:"Образование",
+                summaryContent: "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Я живу в Турции с 2015 года. Здесь я завершил и продолжаю свой профессиональный, личностный и образовательный опыт. Благодаря иностранному удостоверению личности, подтверждающему, что я турецкого происхождения, мои страховые взносы рассчитываются как обычные граждане, что упрощает мои административные действия",
+                educationContent11:"Университет Коджаэли",
+                educationContent12:"Октябрь 2022",
+                educationContent13:"Компьютерное образование и информационные технологии",
+                educationContent21:"Университет Коджаэли",
+                educationContent22:"Июль 2025",
+                educationContent23:"Компьютерное программирование",
+                workTitle: "Опыт работы",
+                workContent11: "Компания FKO Bilişim Import Export Limited.",
+                workContent12: "Май 2023 - Август 2024",
+                workContent13: "Складской работник",
+                workContent21: "Средняя школа, Ататюрк.",
+                workContent22: "Январь 2021 - Май 2021",
+                workContent23: "Студент-учитель",
+                workContent31: "Средняя школа, 28 июня.",
+                workContent32: "Октябрь 2020 - Январь 2021",
+                workContent33: "Студент-учитель",
+                educationTitle: "Образование",
+                abilitiesTitle: "Навыки и интересы",
+                abilitiesContent1: "Сертификаты дополнительного образования:",
+                abilitiesContent11:"Стамбульский университет - Курс подготовки инструктора по робототехническому программированию",
+                abilitiesContent12:"Академия BTK - Введение в основную электронику и робототехнику",
+                abilitiesContent2:"Навыки: Scratch, Arduino, Flutter.",
+                abilitiesContent3:"Языки:",
+                abilitiesContent31:"Туркменский (Родной язык)",
+                abilitiesContent32:"Русский (Почти родной)",
+                abilitiesContent33:"Турецкий (Почти родной)",
+                abilitiesContent34:"Английский (Средний уровень)",
+                abilitiesContent4:"Интересы: .NET, C#, Fuller, Dart",
+                contactTitle: "Контакты",
+                contectContent1:"Электронная почта: nuryagdy.n@hotmail.com"
+                },
+            tm: {
+                name: "Nurýagdy NURBERDIÝEW",
+                jobDescription:"Kompýuter we Bilim Tehnologiýasy Mugallymy ",
+                summaryTitle: "Gysgaça mazmun",
+                educationTitle:"Bilim",
+                summaryContent: "&emsp;&emsp;2015-nji ýyldan bäri Türkiýede ýaşaýaryn. Özümi hünär taýdan kämilleşdirmek, şahsy ösüş we bilim tejribelerimi bu ýerde tamamladym. Türk asyllydygymy görkezýän Daşary ýurtly şahsyýetnamasy sebäpli, meniň kepillendirilen haklarym adaty raýatlar ýaly hasaplanýar we bu meniň administratiw işlerimi ýeňilleşdirýär.",
+                educationContent11:"Kocaeli Unwersitety",
+                educationContent12:"Okutýabr 2022",
+                educationContent13:"Kompýuter we Bilim Tehnologiýasy Mugallymy",
+                educationContent21:"Kocaeli Unwersitety",
+                educationContent22:"Iýýul 2025",
+                educationContent23:"Kompýuter Programist",
+                workTitle: "Iş tejribesi",
+                workContent11: "FKO Bilişim Kompaniýasy.",
+                workContent12: "Maý 2023 - Awgust 2024",
+                workContent13: "Sklat",
+                workContent21: "Atatürk orta mekdebi.",
+                workContent22: "Ýanwar 2021 - Maý 2021",
+                workContent23: "Mugallym stažor",
+                workContent31: "28 Haziran orta mekdebi.",
+                workContent32: "Oktýabyr 2020 - Ýanwar 2021",
+                workContent33: "Mugallym stažor",
+                educationTitle: "Bilim",
+                abilitiesTitle: "Yetenekler we Gyzyklanma Ulgamlar",
+                abilitiesContent1: "Bilim Şahadatnamalary",
+                abilitiesContent11:"Istanbul Universiteti - Robotika Programlaýjy Inwestruktorynyň Tälimi",
+                abilitiesContent12:"BTK Akademiýasy - Esasy Elektronika we Robotika Başlangyç",
+                abilitiesContent2:"Ulgamlar: Scratch, Arduino, Flutter.",
+                abilitiesContent3:"Diller:",
+                abilitiesContent31:"Türkmençe (Halk dili)",
+                abilitiesContent32:"Rusça (Halk diline ýakyn)",
+                abilitiesContent33:"Türkçe (Halk diline ýakyn)",
+                abilitiesContent34:"İngilýzçe (Orta dereje)",
+                abilitiesContent4:"Gyzyklanma Ulgamlar: .NET, C#, Fuller, Dart",
+                contactTitle: "Aragatnaşyk",
+                contectContent1:"Elektron poçta: nuryagdy.n@hotmail.com",
+                
+            }
+        };
+
+        function setLanguage(lang) {
+            
+                document.getElementById('name').textContent = content[lang].name;
+                document.getElementById('job_description').textContent=content[lang].jobDescription
+                document.getElementById('summary_title').textContent = content[lang].summaryTitle;
+                document.getElementById('summary_content').innerHTML = content[lang].summaryContent;
+                document.getElementById('education_title').textContent = content[lang].educationTitle;
+                document.getElementById('education_content_1_1').textContent=content[lang].educationContent11;
+                document.getElementById('education_content_1_2').textContent=content[lang].educationContent12;
+                document.getElementById('education_content_1_3').textContent=content[lang].educationContent13;
+                document.getElementById('education_content_2_1').textContent=content[lang].educationContent21;
+                document.getElementById('education_content_2_2').textContent=content[lang].educationContent22;
+                document.getElementById('education_content_2_3').textContent=content[lang].educationContent23;
+                document.getElementById('work_title').textContent = content[lang].workTitle;
+                document.getElementById('work_content_1_1').textContent=content[lang].workContent11;
+                document.getElementById('work_content_1_2').textContent=content[lang].workContent12;
+                document.getElementById('work_content_1_3').textContent=content[lang].workContent13;
+                document.getElementById('work_content_2_1').textContent=content[lang].workContent21;
+                document.getElementById('work_content_2_2').textContent=content[lang].workContent22;
+                document.getElementById('work_content_2_3').textContent=content[lang].workContent23;
+                document.getElementById('work_content_3_1').textContent=content[lang].workContent31;
+                document.getElementById('work_content_3_2').textContent=content[lang].workContent32;
+                document.getElementById('work_content_3_3').textContent=content[lang].workContent33;
+                document.getElementById('abilities_title').textContent = content[lang].abilitiesTitle;
+                document.getElementById('abilities_content_1').textContent = content[lang].abilitiesContent1;
+                document.getElementById('abilities_content_1_1').textContent = content[lang].abilitiesContent11;
+                document.getElementById('abilities_content_1_2').textContent = content[lang].abilitiesContent12;
+                document.getElementById('abilities_content_2').textContent = content[lang].abilitiesContent2;
+                document.getElementById('abilities_content_3').textContent = content[lang].abilitiesContent3;
+                document.getElementById('abilities_content_3_1').textContent = content[lang].abilitiesContent31;
+                document.getElementById('abilities_content_3_2').textContent = content[lang].abilitiesContent32;
+                document.getElementById('abilities_content_3_3').textContent = content[lang].abilitiesContent33;
+                document.getElementById('abilities_content_3_4').textContent = content[lang].abilitiesContent34;
+                document.getElementById('abilities_content_4').textContent = content[lang].abilitiesContent4;
+                document.getElementById('contact_title').textContent = content[lang].contactTitle;
+                document.getElementById('contect_content_1').textContent = content[lang].contectContent1;
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Varsayılan dil
+        setLanguage('en');
+    </script>
+
+</body>
+</html>

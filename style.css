@@ -1,0 +1,147 @@
+
+body 
+    {
+        font-family: 'Nunito', sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+.container 
+    {
+        max-width: 670px;
+        width: 100%;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+h1 
+    {
+        color: #003366;
+        text-align: center;
+        transition: color 0.3s ease;
+        margin-top: 0px;
+        margin-bottom: 10px;
+   }
+
+h3 
+    {
+        color: #003366;
+        transition: color 0.3s ease;
+        margin-top: 35px;
+    }
+
+h4
+    {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+.language-selector 
+    {
+        margin-bottom: 10px;
+    }
+
+.language-selector button, .dark-mode-toggle button 
+    {
+        margin: 0 1px;
+        padding: 1px 2px;
+        cursor: pointer;
+    }
+
+.dark-mode 
+    {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+.dark-mode .container 
+    {
+        background-color: #1e1e1e;
+    }
+
+.dark-mode h1, .dark-mode h3 
+    {
+        color: #ffcc00;
+    }
+
+.matrix
+    {
+        list-style-type: none;/*normalde ul li maddeleme işaretinde çalışır onu kapatmaya yarar*/
+        padding: 0;/*kume icinde yazıların konumu belirleme*/
+        padding-top: 1px;
+    }
+
+.row
+    {
+        display: flex;
+        justify-self: space-between;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+.row ul
+    {
+        display: flex;
+        justify-self: space-between;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+.row li
+    {
+        padding: 20px;
+        border: 1px solid transparent;    
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 20px;
+    }
+
+.li1
+    {
+        width: 60%;
+    }
+
+.li2
+    {
+        width: 40%;
+        text-align: right;
+    }
+
+.liE1
+    {
+        width: 70%;
+    }
+
+.liE2
+    {
+        width: 30%;
+        text-align: right;            
+    }
+
+.italic 
+    {
+        font-style: italic;
+    }
+
+p   
+    {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: justify;
+    }
+    
